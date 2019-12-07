@@ -9,6 +9,17 @@
  <link rel="stylesheet" href="main.css"> 
  <script src="main.js"></script> 
 
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+$(function() {
+   $('.button').on('click', function() {
+   });
+   var clc = setInterval( function() { $('.button').click(); }, 120000);
+});
+</script>
+  
+  
 <body> 
  <div id="main"> 
 <!--
@@ -44,7 +55,7 @@
   <h1 class="title">PZM_BTC_USD(Т)</h1>
 
   <div class="text-center">
-   <button type='button'>Обновить курс</button> 
+   <button class='button'>Обновить курс</button> 
   
 </div>
   
@@ -62,6 +73,7 @@
    <div class="div">
   <div class="sellPZM_USD">Buy PZM_USDT: <span></span></div> 
     <div class="SellPZM_USD1">Обьем: <span></span></div>  
+     <label>---------------------</label>
   <div class="buyPZM_USD">Sell PZM_USDT: <span></span></div> 
      <div class="BuyPZM_USD1">Обьем: <span></span></div> 
 </div> 
@@ -122,6 +134,7 @@
  <label>---------------------</label>    
   <div class="sellPZM_USD_livecoin">Buy PZM_USD: <span></span></div> 
     <div class="SellPZM_USD_livecoin1">Обьем: <span></span></div> 
+    <label>---------------------</label>
   <div class="buyPZM_USD_livecoin">Sell PZM_USD: <span></span></div> 
     <div class="BuyPZM_USD_livecoin1">Обьем: <span></span></div> 
 </div> 
@@ -157,6 +170,7 @@
   <div class="div">
   <div class="buyPZM_USD_hotbit">Sell PZM_USDT: <span></span></div> 
      <div class="BuyPZM_USD_hotbit1">Обьем: <span></span></div> 
+    <label>---------------------</label>
   <div class="sellPZM_USD_hotbit">Buy PZM_USDT: <span></span></div> 
     <div class="SellPZM_USD_hotbit1">Обьем: <span></span></div> 
   </div>
