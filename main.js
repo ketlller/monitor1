@@ -51,8 +51,14 @@ var currentPrice_SellPZM_USD_hotbit = null;
  
 
 
+$(function() {
+   $('.button').on('click', function() {
+   });
+   var clc = setInterval( function() { $('.button').click(); }, 120000);
+});
 
-btn.addEventListener('click', () => {
+ btn.addEventListener('click', () => {  
+
 
  
    fetch(resUrl1)
@@ -144,12 +150,12 @@ livecoinhotbit.innerHTML = (((currentPrice_SellPZM_USD_hotbit*100)/currentPrice_
   .catch(err => console.log(err)); 
   
   
-    });
+   });
 
 
 
   function beep() {
-	(new Audio("https://polo1.at.ua/beep1.wav")).play();
+	(new Audio("https://adolf.ucoz.net/beep.wav")).play();
 };
    
  
