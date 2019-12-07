@@ -51,11 +51,6 @@ var currentPrice_SellPZM_USD_hotbit = null;
  
 
 
-$(function() {
-   $('.button').on('click', function() {
-   });
-   var clc = setInterval( function() { $('.button').click(); }, 120000);
-});
 
  btn.addEventListener('click', () => {  
 
