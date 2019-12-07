@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>T6 trade page</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+ <link rel="stylesheet" href="main.css"> 
+ <script src="main.js"></script> 
+
+<body> 
+ <div id="main"> 
+<!--
+<div class="text-center">
+	<p>Сумма: <input type="number" id="min_transaction" value="50"> </p>
+</div>
+//-->
+  
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 700px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+</style>
+</head>
+<body>  
+
+  <h1 class="title">PZM_BTC_USD(Т)</h1>
+
+  <div class="text-center">
+   <button type='button'>Обновить курс</button> 
+  
+</div>
+  
+<div class="row">
+  <div class="column" style="background-color:#ccc;">
+   <div class="text-center">  <h2>btc-alpha.com</h2>
+
+    
+ <!--   <button type='button'>Обновить курс</button>//-->
+    
+    
+    
+ <label>---------------------</label>
+
+   <div class="div">
+  <div class="sellPZM_USD">Buy PZM_USDT: <span></span></div> 
+    <div class="SellPZM_USD1">Обьем: <span></span></div>  
+  <div class="buyPZM_USD">Sell PZM_USDT: <span></span></div> 
+     <div class="BuyPZM_USD1">Обьем: <span></span></div> 
+</div> 
+  
+    <br>---------------------</br>
+ <!--    <label>---------------------</label>
+  <div class="div1">
+  <div class="sellPZM_BTC">Buy PZM_BTC: <span></span></div>
+  <div class="buyPZM_BTC">Sell PZM_BTC: <span></span></div>        
+</div>  
+     <label>---------------------</label>  
+ <div class="div1">
+  <div class="sell">Buy BTC/USDT: <span></span></div>
+  <div class="buy">Sell BTC/USDT: <span></span></div>  
+</div>
+     <label>---------------------</label>
+  <p>
+<label>USDT_PZM_BTC_USDT: $</label>
+<input type="number" id="inputdol" placeholder="$" oninput="moneyConverter(this.value)" onchange="moneyConverter(this.value)">
+ 
+<label>ТЕСТ:<span id="inputdrub"><span></label>
+  </p>
+	
+  <p>Sound notification  <input type="checkbox" id="USDT_PZM_BTC_USDT_notificator" name="USDT_PZM_BTC_USDT_notificator" checked></p>
+ 
+  <label>---------------------</label> 
+ //-->
+  <p> 
+ 
+      <div class="div">
+  <div class="inputdrub1">btc-alpha ➤ livecoin: <span></span>%</div>
+     <div class="SellPZM_USD1">Обьем: <span></span></div>
+</div>  
+  	
+   <p>Sound notification  <input type="checkbox" id="btcalphalivecoin_notificator" name="btcalphalivecoin_notificator" checked></p>   
+  </p>  
+  <label>---------------------</label>
+    <p> 
+       <div class="div">
+  <div class="inputdrub3">btc-alpha ➤ hotbit: <span></span>%</div>
+     <div class="SellPZM_USD1">Обьем: <span></span></div>
+</div>  
+  	
+   <p>Sound notification  <input type="checkbox" id="btcalphahotbit_notificator" name="btcalphahotbit_notificator" checked></p>   
+  </p> 
+  
+  
+</div>
+  </p>
+  </div>
+  
+  
+  <div class="column" style="background-color:#bbb;">
+    <div class="text-center"> <h2>livecoin.net</h2>
+  <!-- <button type='button1'>Обновить курс</button> //-->
+     
+  <div class="div">
+ <label>---------------------</label>    
+  <div class="sellPZM_USD_livecoin">Buy PZM_USD: <span></span></div> 
+    <div class="SellPZM_USD_livecoin1">Обьем: <span></span></div> 
+  <div class="buyPZM_USD_livecoin">Sell PZM_USD: <span></span></div> 
+    <div class="BuyPZM_USD_livecoin1">Обьем: <span></span></div> 
+</div> 
+    
+     <br>---------------------</br>
+    <p>
+       <div class="div">
+  <div class="inputdrub2">livecoin ➤ btc-alpha: <span></span>%</div>
+     <div class="SellPZM_USD_livecoin1">Обьем: <span></span></div>
+</div>  
+  </p>	
+    <p>Sound notification  <input type="checkbox" id="livecoinbtcalpha_notificator" name="livecoinbtcalpha_notificator" checked></p>
+
+<label>---------------------</label>
+    <p>
+       <div class="div">
+  <div class="inputdrub6">livecoin ➤ hotbit: <span></span>%</div>
+     <div class="SellPZM_USD_livecoin1">Обьем: <span></span></div>
+</div>  
+  </p>	
+    <p>Sound notification  <input type="checkbox" id="livecoinhotbit_notificator" name="livecoinhotbit_notificator" checked></p> 
+
+     </div>
+  </div>
+  
+  
+  
+  
+  <div class="column" style="background-color:#ccc;">
+   <div class="text-center"> <h2>hotbit.io</h2>
+<!--<button type='button'>--------</button>  //-->  
+    <label>---------------------</label>
+  <div class="div">
+  <div class="buyPZM_USD_hotbit">Sell PZM_USDT: <span></span></div> 
+     <div class="BuyPZM_USD_hotbit1">Обьем: <span></span></div> 
+  <div class="sellPZM_USD_hotbit">Buy PZM_USDT: <span></span></div> 
+    <div class="SellPZM_USD_hotbit1">Обьем: <span></span></div> 
+  </div>
+    <br>---------------------</br>
+    <p>
+       <div class="div">
+  <div class="inputdrub4">hotbit ➤ btc-alpha: <span></span>%</div>
+     <div class="1SellPZM_USD_livecoin1">Обьем: <span></span></div>
+</div>  
+  </p>	
+    <p>Sound notification  <input type="checkbox" id="hotbitbtcalpha_notificator" name="hotbitbtcalpha_notificator" checked></p>
+
+<label>---------------------</label>
+    <p>
+       <div class="div">
+  <div class="inputdrub5">hotbit ➤ livecoin: <span></span>%</div>
+     <div class="1SellPZM_USD_livecoin1">Обьем: <span></span></div>
+</div>  
+  </p>	
+    <p>Sound notification  <input type="checkbox" id="hotbitlivecoin_notificator" name="hotbitlivecoin_notificator" checked></p>
+
+    
+
+</div>  
+</div>     
+    
+ 
+    
+
+
+
+  
