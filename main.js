@@ -52,8 +52,7 @@ var currentPrice_SellPZM_USD_hotbit = null;
 
 
 
- btn.addEventListener('click', () => {  
-
+setInterval(() => {
 
  
    fetch(resUrl1)
@@ -145,12 +144,12 @@ livecoinhotbit.innerHTML = (((currentPrice_SellPZM_USD_hotbit*100)/currentPrice_
   .catch(err => console.log(err)); 
   
   
-   });
+   },5000);
 
 
 
   function beep() {
-	(new Audio("https://adolf.ucoz.net/beep.wav")).play();
+	(new Audio("https://polo1.at.ua/beep1.wav")).play();
 };
    
  
