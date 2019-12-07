@@ -184,21 +184,9 @@ function readMore() {
    bun.innerHTML = "Скрыть";
    more.style.display = "inline"; 
  }
-	
-	
-if(dots1.style.display === "none") {
-    dots1.style.display = "inline";
-    bun1.innerHTML = "Подробнее";
-    more1.style.display = "none";
- } else {
-   dots1.style.display = "none";
-   bun1.innerHTML = "Скрыть";
-   more1.style.display = "inline"; 
- }		
+ }	
 	
 
-	
-}
 
 function readMore1() {
 var dots1 = document.getElementById("dots1");
