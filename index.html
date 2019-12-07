@@ -11,13 +11,7 @@
 
  
 
-<script>
-$(function() {
-   $('.button').on('click', function() {
-   });
-   var clc = setInterval( function() { $('.button').click(); }, 180000);
-});
-</script>
+
 
   
 <body> 
@@ -199,7 +193,14 @@ $(function() {
     
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    
+
+    <script>
+$(function() {
+   $('.button').on('click', function() {
+   });
+   var clc = setInterval( function() { $('.button').click(); }, 10000);
+});
+</script>
 
 </body>
 </html>
