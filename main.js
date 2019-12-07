@@ -171,14 +171,9 @@ function readMore() {
  var dots = document.getElementById("dots");
  var more = document.getElementById("more");
  var bun = document.getElementById("bun");
-   var dots1 = document.getElementById("dots1");
-   var more1 = document.getElementById("more1");
-   var bun1 = document.getElementById("bun1");	 
- 
+   
 	
-var dots2 = document.getElementById("dots2");
-  var more2 = document.getElementById("more2");
-  var bun2 = document.getElementById("bun2");	
+  	
 	
  if(dots.style.display === "none") {
     dots.style.display = "inline";
@@ -201,6 +196,29 @@ if(dots1.style.display === "none") {
    more1.style.display = "inline"; 
  }		
 	
+
+	
+}
+
+function readMore1() {
+var dots1 = document.getElementById("dots1");
+   var more1 = document.getElementById("more1");
+   var bun1 = document.getElementById("bun1");	 
+ if(dots1.style.display === "none") {
+    dots1.style.display = "inline";
+    bun1.innerHTML = "Подробнее";
+    more1.style.display = "none";
+ } else {
+   dots1.style.display = "none";
+   bun1.innerHTML = "Скрыть";
+   more1.style.display = "inline"; 
+ }		
+ }
+
+function readMore2() {
+var dots2 = document.getElementById("dots2");
+  var more2 = document.getElementById("more2");
+  var bun2 = document.getElementById("bun2");
 if(dots2.style.display === "none") {
     dots2.style.display = "inline";
     bun2.innerHTML = "Подробнее";
@@ -209,10 +227,5 @@ if(dots2.style.display === "none") {
    dots2.style.display = "none";
    bun2.innerHTML = "Скрыть";
    more2.style.display = "inline"; 
- }		
-	
-	
-	
-}
-
-
+ }
+	}
