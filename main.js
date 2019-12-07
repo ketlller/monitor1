@@ -144,7 +144,7 @@ livecoinhotbit.innerHTML = (((currentPrice_SellPZM_USD_hotbit*100)/currentPrice_
   .catch(err => console.log(err)); 
   
   
-   },5000);
+   },120000);
 
 
 
