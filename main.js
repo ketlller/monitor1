@@ -190,14 +190,14 @@ function readMore1() {
    var dots1 = document.getElementById("dots1");
    var more1 = document.getElementById("more1");
    var bun1 = document.getElementById("bun1");
-if(dots1.style.display === "none") {
-    dots1.style.display = "inline";
+if(dots1.style.display === "none1") {
+    dots1.style.display = "inline1";
     bun1.innerHTML = "Подробнее";
-    more1.style.display = "none";
+    more1.style.display = "none1";
  } else {
-   dots1.style.display = "none";
+   dots1.style.display = "none1";
    bun1.innerHTML = "Скрыть";
-   more1.style.display = "inline"; 
+   more1.style.display = "inline1"; 
  }	
 }	
 
@@ -205,14 +205,14 @@ function readMore2() {
   var dots2 = document.getElementById("dots2");
   var more2 = document.getElementById("more2");
   var bun2 = document.getElementById("bun2");	
-if(dots2.style.display === "none") {
-    dots2.style.display = "inline";
+if(dots2.style.display === "none2") {
+    dots2.style.display = "inline2";
     bun2.innerHTML = "Подробнее";
-    more2.style.display = "none";
+    more2.style.display = "none2";
  } else {
-   dots2.style.display = "none";
+   dots2.style.display = "none2";
    bun2.innerHTML = "Скрыть";
-   more2.style.display = "inline"; 
+   more2.style.display = "inline2"; 
  }	
 } 
 
