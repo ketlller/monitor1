@@ -3,29 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <title>T6 trade page</title>
+<title>PZM_USD(Т)</title>
 
-
-
- 
-
-
-
-  
-<body> 
- <div id="main"> 
-<!--
-<div class="text-center">
-	<p>Сумма: <input type="number" id="min_transaction" value="50"> </p>
-</div>
-//-->
-  
-
+</head>
 <style>
 * {
     box-sizing: border-box;
 }
-
 /* Create three equal columns that floats next to each other */
 .column {
     float: left;
@@ -33,7 +17,6 @@
     padding: 10px;
     height: 700px; /* Should be removed. Only for demonstration */
 }
-
 /* Clear floats after the columns */
 .row:after {
     content: "";
@@ -41,7 +24,23 @@
     clear: both;
 }
 </style>
-</head>
+
+<body>  
+
+
+  <script>
+$(function() {
+   $('.button').on('click', function() {
+   });
+   var clc = setInterval( function() { $('.button').click(); }, 10000);
+});
+</script>
+ 
+ <div id="main"> 
+ 
+
+
+
 <body>  
 
   <h1 class="title">PZM_BTC_USD(Т)</h1>
@@ -193,13 +192,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
  <link rel="stylesheet" href="main.css"> 
  <script src="main.js"></script>
-    <script>
-$(function() {
-   $('.button').on('click', function() {
-   });
-   var clc = setInterval( function() { $('.button').click(); }, 10000);
-});
-</script>
+    
 
 </body>
 </html>
