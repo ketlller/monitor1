@@ -40,21 +40,12 @@ $(function() {
  
 
 	<!--<Скрипт радио>-->
-<script type="text/javascript"> 
-function radio(url) {
-var width = 600;
-var height = 490;
-var leftPx = (screen.availWidth - width) / 2;
-var topPx = (screen.availHeight - height) / 2;
-var params = "width=" + width + ", height=" + height + ", resizable=yes, scrollbars=yes, top=" + topPx + ", left=" + leftPx;
-window.open(url, "newWindow", params);
-} 
-</script>
-<!--</Скрипт радио>-->
+<div id="RP_v4_radio" align="center" class="RPv4-well RPv4-well-small"><div class="RPv4-radioplayer-wrapper"><div id="RP_v4_radioplayer"></div></div><div class="RPv4-btn-group" align="left"><a class="RPv4-btn RPv4-dropdown-toggle" data-toggle="dropdown" href="#">Слушать радио<span class="RPv4-caret"></span></a><ul class="RPv4-dropdown-menu"></ul></div></div>
+<script type="text/javascript" src="https://yandex.st/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://yandex.st/swfobject/2.2/swfobject.min.js"></script>
+<script type="text/javascript">var RP_bs = false; /* На сайте используется Bootstrap? */ var RP_v4_theme = 'light'; // Светлая тема -> 'light'; Темная тема -> 'dark'</script>
+<script type="text/javascript" src="https://radiopotok.ru/f/script4/c4553748b0880e0933d0c43116825e3c.js" charset="UTF-8"></script>
 
-<!--<Кнопка радио>-->
-<a href="http://myfresh.tv/radio/BestR.html" onclick="radio(this.href); return false;"><img style="border: none;" src="http://myfresh.tv/radio/player/radio.png" alt="Слушать онлайн радио"></a>
-<!--</Кнопка радио>-->
 	
 	
  <div id="main"> 
