@@ -167,6 +167,20 @@ livecoinhotbit.innerHTML = (((currentPrice_SellPZM_USD_hotbit*100)/currentPrice_
 
 
 
-
+function readMore() {
+ var dots = document.getElementById("dots");
+ var more = document.getElementById("more");
+ var bun = document.getElementById("bun");
+ 
+ if(dots.style.display === "none") {
+    dots.style.display = "inline";
+    bun.innerHTML = "Подробнее";
+    more.style.display = "none";
+ } else {
+   dots.style.display = "none";
+   bun.innerHTML = "Скрыть";
+   more.style.display = "inline"; 
+ }
+} 
 
 
