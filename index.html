@@ -38,21 +38,22 @@
 $(function() {
    $('.button').on('click', function() {
    });
-   var clc = setInterval( function() { $('.button').click(); }, 240000);
+   var clc = setInterval( function() { $('.button').click(); }, 200000);
 });
 </script>
  
-/* Readmore.js - плагин скрывающий длинный текст */
+ 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="/readmore.js"></script> //Подключаем скрипт readmore.js
 <script>
-$('section').readmore({ //вызов плагина
+$('section').readmore({ //вызов плагина Readmore.js - плагин скрывающий длинный текст
 speed: 250, //скорость раскрытия скрытого текста (в миллисекундах)
 maxHeight: 43, //высота раскрытой области текста (в пикселях)
 heightMargin: 16, //избегание ломания блоков, которые больше maxHeight (в пикселях)
 moreLink: '<a href="#">Еще</a>', //ссылка "Читать далее", можно переименовать
 lessLink: '<a href="#">Скрыть</a>' //ссылка "Скрыть", можно переименовать
-});
-</script>	 //для вывода используется тег section, при желании и необходимости его можно заменить, например, на тег article
+});        //для вывода используется тег section, при желании и необходимости его можно заменить, например, на тег article
+</script>	 
 
 	
 	
