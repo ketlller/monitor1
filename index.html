@@ -21,7 +21,7 @@
     float: left;
     width: 33.33%;
     padding: 10px;
-    height: 1100px; /* Should be removed. Only for demonstration */
+    height: 1200px; /* Should be removed. Only for demonstration */
 }
 /* Clear floats after the columns */
 .row:after {
@@ -121,9 +121,11 @@ $(function() {
   	
    <p>Sound notification  <input type="checkbox" id="btcalphahotbit_notificator" name="btcalphahotbit_notificator" checked></p>   
   </p> </b>
-  <label>-------------------------------------------------------------------------------</label>
-<p>
-Депозиты, вывод, Fee	
+  <article>-------------------------------------------------------------------------------</label>
+
+<article>
+ <p>
+<b><span style="color: #0000CD;">Инфа по депозитам, Fee .. </span></b>
 <span id="dots">...</span><span id="more">	
 	<br>Fee - 0.2%</br>
 <br>Комиссия вывода: 10 PZM  </br>
@@ -144,11 +146,9 @@ $(function() {
 <br>Сумма вывода больше  5 USDT и меньше чем 1000000 USDT, 5000 USD за 24 часов.</br>
 
 <br>После депозита USDT, обмен сделать на USD потом на PZM (  USDT =>> USD =>> PZM  )</br>
-</span></p>
-<button id="bun"
-onclick="readMore()">Подробнее</button>
 
- <label>-------------------------------------------------------------------------------</label> 
+</article> 
+ <br>-------------------------------------------------------------------------------</br> 
 </div>
   </p>
   </div>
@@ -186,7 +186,8 @@ onclick="readMore()">Подробнее</button>
     <p>Sound notification  <input type="checkbox" id="livecoinhotbit_notificator" name="livecoinhotbit_notificator" checked></p> 
 </b>
 <label>-------------------------------------------------------------------------------</label>
-<section>
+<article>
+	<b><span style="color: #0000CD;">Инфа по депозитам, Fee .. </span></b>
 <br>Минимальный ордер: 0.0001 BTC</br>
 <br>Fee - 0.18%</br>
 <br>Комиссия вывода: 0.5%, но не более 10 PZM</br>
@@ -208,8 +209,8 @@ onclick="readMore()">Подробнее</button>
 
 <br>После депозита USDT, обмен сделать на USD потом на PZM (  USDT =>> USD =>> PZM  )</br>
 <br>Вывод PZM только через личный кошелек  - норм</br>
-</section>
-<label>-------------------------------------------------------------------------------</label>
+</article>
+<br>-------------------------------------------------------------------------------</br>
      </div>
   </div>
   
@@ -246,8 +247,9 @@ onclick="readMore()">Подробнее</button>
     <p>Sound notification  <input type="checkbox" id="hotbitlivecoin_notificator" name="hotbitlivecoin_notificator" checked></p>
 <label>-------------------------------------------------------------------------------</label>
 	   </b>
-<article>	  
-  <br> <label>Fee - 0.1%</br>
+<article>	
+	<b><span style="color: #0000CD;">Инфа по депозитам, Fee .. </span></b>	
+  <br>  Fee - 0.1%</br>
  <br>Комиссия вывода: 2 PZM</br>
  <br>Минимальная сумма вывода: 4 PZM</br>
  <br>Депозит PZM 18 подтверждений  = 18 мин</br>
@@ -266,7 +268,7 @@ onclick="readMore()">Подробнее</button>
  <p>Вывод USDT на btc-alpha.com 14-26 мин  или 55-114 Block Confirmations - норм</p>
  <p>Вывод PZM с hotbit.io только через личный кошелек  - норм </p>
 </article>
-<label>-------------------------------------------------------------------------------</label>
+<br>-------------------------------------------------------------------------------</br>
 </div>  
 </div>     
     
@@ -279,11 +281,11 @@ onclick="readMore()">Подробнее</button>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="/readmore.js"></script> 
 <script>
-$('section').readmore({ //вызов плагина Readmore.js - плагин скрывающий длинный текст
+$('article').readmore({ //вызов плагина Readmore.js - плагин скрывающий длинный текст
 speed: 250, //скорость раскрытия скрытого текста (в миллисекундах)
 maxHeight: 43, //высота раскрытой области текста (в пикселях)
 heightMargin: 16, //избегание ломания блоков, которые больше maxHeight (в пикселях)
-moreLink: '<a href="#">Еще</a>', //ссылка "Читать далее", можно переименовать
+moreLink: '<a href="#">Еще...</a>', //ссылка "Читать далее", можно переименовать
 lessLink: '<a href="#">Скрыть</a>' //ссылка "Скрыть", можно переименовать
 });        //для вывода используется тег section, при желании и необходимости его можно заменить, например, на тег article
 </script>	 
