@@ -7,7 +7,7 @@
  <link rel="icon" href="https://github.com/ketlller/ketlller.github.io/blob/master/favicon.ico" type="image/x-icon" />
  <link rel="shortcut icon" href="https://github.com/ketlller/ketlller.github.io/blob/master/favicon.ico" type="image/x-icon" />	
 <link rel="shortcut icon" type="image/ico" href="https://github.com/ketlller/ketlller.github.io/blob/master/favicon.ico"/>
-	
+<script src="/readmore.js"></script> //Подключаем скрипт readmore.js	
 	</head>
 
 
@@ -42,7 +42,16 @@ $(function() {
 });
 </script>
  
-
+/* Readmore.js - плагин скрывающий длинный текст */
+<script>
+$('section').readmore({ //вызов плагина
+speed: 250, //скорость раскрытия скрытого текста (в миллисекундах)
+maxHeight: 43, //высота раскрытой области текста (в пикселях)
+heightMargin: 16, //избегание ломания блоков, которые больше maxHeight (в пикселях)
+moreLink: '<a href="#">Еще</a>', //ссылка "Читать далее", можно переименовать
+lessLink: '<a href="#">Скрыть</a>' //ссылка "Скрыть", можно переименовать
+});
+</script>	 //для вывода используется тег section, при желании и необходимости его можно заменить, например, на тег article
 
 	
 	
@@ -185,7 +194,7 @@ onclick="readMore()">Подробнее</button>
     <p>Sound notification  <input type="checkbox" id="livecoinhotbit_notificator" name="livecoinhotbit_notificator" checked></p> 
 </b>
 <label>-------------------------------------------------------------------------------</label>
-
+<section>
 <br>Минимальный ордер: 0.0001 BTC</br>
 <br>Fee - 0.18%</br>
 <br>Комиссия вывода: 0.5%, но не более 10 PZM</br>
@@ -207,7 +216,7 @@ onclick="readMore()">Подробнее</button>
 
 <br>После депозита USDT, обмен сделать на USD потом на PZM (  USDT =>> USD =>> PZM  )</br>
 <br>Вывод PZM только через личный кошелек  - норм</br>
-
+</section>
 <label>-------------------------------------------------------------------------------</label>
      </div>
   </div>
@@ -245,7 +254,7 @@ onclick="readMore()">Подробнее</button>
     <p>Sound notification  <input type="checkbox" id="hotbitlivecoin_notificator" name="hotbitlivecoin_notificator" checked></p>
 <label>-------------------------------------------------------------------------------</label>
 	   </b>
-	  
+<section>	  
   <br> <label>Fee - 0.1%</br>
  <br>Комиссия вывода: 2 PZM</br>
  <br>Минимальная сумма вывода: 4 PZM</br>
@@ -264,7 +273,7 @@ onclick="readMore()">Подробнее</button>
 
  <p>Вывод USDT на btc-alpha.com 14-26 мин  или 55-114 Block Confirmations - норм</p>
  <p>Вывод PZM с hotbit.io только через личный кошелек  - норм </p>
-
+</section>
 <label>-------------------------------------------------------------------------------</label>
 </div>  
 </div>     
