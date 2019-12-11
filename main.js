@@ -103,22 +103,21 @@ var previousPositive5 = true;
        currentPrice_BuyCOIN_USD_livecoin = body.bids[0][0];
        currentPrice_SellCOIN_USD_livecoin = body.asks[0][0];
         
-	      var value = (((currentPrice_BuyCOIN_USD*100)/currentPrice_SellCOIN_USD_livecoin)-100).toFixed(2);   
+ var value = (((currentPrice_BuyCOIN_USD*100)/currentPrice_SellCOIN_USD_livecoin)-100).toFixed(2);   
       livecoinbtcalpha.innerHTML = value;
-        var value1 = (((currentPrice_SellCOIN_USD_hotbit*100)/currentPrice_SellCOIN_USD_livecoin)-100).toFixed(2);
+ var value1 = (((currentPrice_SellCOIN_USD_hotbit*100)/currentPrice_SellCOIN_USD_livecoin)-100).toFixed(2);
       livecoinhotbit.innerHTML = value1;    
-        var value2 = (((currentPrice_BuyCOIN_USD_livecoin*100)/currentPrice_SellCOIN_USD)-100).toFixed(2); 	 
+ var value2 = (((currentPrice_BuyCOIN_USD_livecoin*100)/currentPrice_SellCOIN_USD)-100).toFixed(2); 	 
       btcalphalivecoin.innerHTML = value2;        
- 
   var value3 = (((currentPrice_BuyCOIN_USD_livecoin*100)/currentPrice_BuyCOIN_USD_hotbit)-100).toFixed(2);
- hotbitlivecoin.innerHTML = value3; 
-  var value4 = (((currentPrice_SellCOIN_USD_hotbit*100)/currentPrice_SellCOIN_USD)-100).toFixed(2);         
-btcalphahotbit.innerHTML = value4;
-  var value5 = (((currentPrice_BuyCOIN_USD*100)/currentPrice_BuyCOIN_USD_hotbit)-100).toFixed(2);      
-hotbitbtcalpha.innerHTML = value5; 	      
+      hotbitlivecoin.innerHTML = value3; 
+ var value4 = (((currentPrice_SellCOIN_USD_hotbit*100)/currentPrice_SellCOIN_USD)-100).toFixed(2);         
+      btcalphahotbit.innerHTML = value4;
+ var value5 = (((currentPrice_BuyCOIN_USD*100)/currentPrice_BuyCOIN_USD_hotbit)-100).toFixed(2);      
+      hotbitbtcalpha.innerHTML = value5; 	      
       console.log(body);	      
 	      
-      if(value < 0) {
+      if(value > 0) {
         if(previousPositive) {
           counter.innerHTML++;
           previousPositive = false;
@@ -128,7 +127,7 @@ hotbitbtcalpha.innerHTML = value5;
       }
         
         
-        if(value1 < 0) {
+        if(value1 > 0) {
         if(previousPositive1) {
           counter1.innerHTML++;
           previousPositive1 = false;
@@ -137,7 +136,7 @@ hotbitbtcalpha.innerHTML = value5;
         previousPositive1 = true;
       }
         
-        if(value2 < 0) {
+        if(value2 > 0) {
         if(previousPositive2) {
           counter2.innerHTML++;
           previousPositive2 = false;
@@ -146,7 +145,7 @@ hotbitbtcalpha.innerHTML = value5;
         previousPositive2 = true;
       }
         
-        if(value3 < 0) {
+        if(value3 > 0) {
         if(previousPositive3) {
           counter3.innerHTML++;
           previousPositive3 = false;
@@ -155,7 +154,7 @@ hotbitbtcalpha.innerHTML = value5;
         previousPositive3 = true;
       }
         
-        if(value4 < 0) {
+        if(value4 > 0) {
         if(previousPositive4) {
           counter4.innerHTML++;
           previousPositive4 = false;
@@ -164,7 +163,7 @@ hotbitbtcalpha.innerHTML = value5;
         previousPositive4 = true;
       }
         
-        if(value5 < 0) {
+        if(value5 > 0) {
         if(previousPositive5) {
           counter5.innerHTML++;
           previousPositive5 = false;
