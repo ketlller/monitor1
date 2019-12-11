@@ -234,6 +234,6 @@ if(currentPrice_BuyCOIN_USD_hotbit < currentPrice_BuyCOIN_USD && $('#hotbitbtcal
 
 
   function beep() {
-	(new Audio("https://adolf.ucoz.net/beep.wav")).play();
+	(new Audio("beep.wav")).play();
 };
   
