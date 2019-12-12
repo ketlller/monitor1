@@ -35,21 +35,7 @@ var counter4 = document.querySelector('#counter4');
 var counter5 = document.querySelector('#counter5');
 
 
-let proxyUrl = 'https://cors-anywhere.herokuapp.com/',
 
-    targetUrl_COIN_USD = 'https://btc-alpha.com/api/v1/orderbook/PZM_USD/'; 
-    targetUrl_COIN_USD_Livecoin = 'https://api.livecoin.net/exchange/order_book?currencyPair=PZM/USD'; 
-      targetUrl_COIN_USD_hotbit1 = 'https://api.hotbit.io/api/v1/order.book?market=PZM/USDT&side=1&offset=0&limit=1'; 
-      targetUrl_COIN_USD_hotbit2 = 'https://api.hotbit.io/api/v1/order.book?market=PZM/USDT&side=2&offset=0&limit=1'; 
-
-
-    
-let resUrl1 = proxyUrl + targetUrl_COIN_USD;
-let resUrl2 = proxyUrl + targetUrl_COIN_USD_Livecoin;
-let resUrl3 = proxyUrl + targetUrl_COIN_USD_hotbit1;
-let resUrl4 = proxyUrl + targetUrl_COIN_USD_hotbit2;
-
-console.log()
 
  var currentPrice_BuyCOIN_USD = null;
  var currentPrice_SellCOIN_USD = null;
@@ -71,6 +57,44 @@ var previousPositive5 = true;
  btn.addEventListener('click', () => {  
 
 
+   var val1 = document.querySelector("#new_type1").value;
+   var val2 = document.querySelector("#new_type2").value;
+   var val3 = document.querySelector("#new_type3").value;
+   //var val4 = document.querySelector("#new_type4").value;
+   
+    var targetUrl_COIN_USD = 'https://btc-alpha.com/api/v1/orderbook/PZM_USD/'; 
+   targetUrl_COIN_USD=targetUrl_COIN_USD.replace(/[^\/]+(?=\/$)/,val1);
+   
+    var targetUrl_COIN_USD_Livecoin = 'https://api.livecoin.net/exchange/order_book?currencyPair=PZM/USD';
+   targetUrl_COIN_USD_Livecoin=targetUrl_COIN_USD_Livecoin.replace(/[^\=]*$/,val2);
+   
+      var targetUrl_COIN_USD_hotbit1 = 'https://api.hotbit.io/api/v1/order.book?market=PZM/USDT&side=1&offset=0&limit=1'; 
+   targetUrl_COIN_USD_hotbit1=targetUrl_COIN_USD_hotbit1.replace(/([?&]market=)[^&]+/,'$1'+val3);
+
+
+   
+      var targetUrl_COIN_USD_hotbit2 = 'https://api.hotbit.io/api/v1/order.book?market=PZM/USDT&side=2&offset=0&limit=1'; 
+   targetUrl_COIN_USD_hotbit2=targetUrl_COIN_USD_hotbit2.replace(/([?&]market=)[^&]+/,'$1'+val3);
+
+
+
+   
+let proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+
+    
+let resUrl1 = proxyUrl + targetUrl_COIN_USD;
+let resUrl2 = proxyUrl + targetUrl_COIN_USD_Livecoin;
+let resUrl3 = proxyUrl + targetUrl_COIN_USD_hotbit1;
+let resUrl4 = proxyUrl + targetUrl_COIN_USD_hotbit2;
+
+console.log()
+   
+   
+   
+   
+   
+   
+   
  
    fetch(resUrl1)
     .then(res => {
