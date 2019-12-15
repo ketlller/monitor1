@@ -106,6 +106,9 @@ var previousPositive44444 = true;
 var previousPositive55555 = true; 
 var previousPositive66666 = true; 
 
+var StatusConect_btcalpha = document.querySelector('#StatusConect_btcalpha');
+var StatusConect_livecoin = document.querySelector('#StatusConect_livecoin');
+var StatusConect_hotbit = document.querySelector('#StatusConect_hotbit');
 
  btn.addEventListener('click', () => {  
 
@@ -159,7 +162,7 @@ console.log()
     
       currentPrice_BuyCOIN_USD = body.buy[0].price;
       currentPrice_SellCOIN_USD = body.sell[0].price;
-    
+    StatusConect_COIN_USD_btcalpha = body.sell[0].price;
     
    
     });
@@ -179,6 +182,9 @@ console.log()
     
        currentPrice_BuyCOIN_USD_livecoin = body.bids[0][0];
        currentPrice_SellCOIN_USD_livecoin = body.asks[0][0];
+       StatusConect_COIN_USD_livecoin = body.bids[0].length; 
+        
+       
         
  var value = (((currentPrice_BuyCOIN_USD*100)/currentPrice_SellCOIN_USD_livecoin)-100).toFixed(2);   
       livecoinbtcalpha.innerHTML = value;
@@ -194,6 +200,8 @@ console.log()
       hotbitbtcalpha.innerHTML = value5; 	      
       console.log(body);
 	      
+        
+       
       
       if(value > 0) {
         if(previousPositive) {
@@ -570,10 +578,33 @@ if(currentPrice_BuyCOIN_USD_hotbit < currentPrice_BuyCOIN_USD_livecoin && $('#ho
 if(currentPrice_SellCOIN_USD < currentPrice_SellCOIN_USD_hotbit && $('#btcalphahotbit_notificator').prop('checked'))beep();        
 if(currentPrice_BuyCOIN_USD_hotbit < currentPrice_BuyCOIN_USD && $('#hotbitbtcalpha_notificator').prop('checked'))beep();        
        
-          
+    if(StatusConect_COIN_USD_btcalpha > 0) { 
+            StatusConect_btcalpha.innerHTML = ('Status: OK Conected');
+      StatusConect_btcalpha.style.color = "#006400";
+
+         } else {
+        StatusConect_btcalpha.innerHTML = ('Status: NO Conected');
+             StatusConect_btcalpha.style.color = "#f00";
+      }      
       
-          
+        
+      if(StatusConect_COIN_USD_livecoin == 3) { 
+            StatusConect_livecoin.innerHTML = ('Status: OK Conected');
+        StatusConect_livecoin.style.color = "#006400";
+         } else {
+        StatusConect_livecoin.innerHTML = ('Status: NO Conected');
+           StatusConect_livecoin.style.color = "#f00";
+      }   
+        
+       if(StatusConect_COIN_USD_hotbit == 1) { 
+            StatusConect_hotbit.innerHTML = ('Status: OK Conected');
+         StatusConect_hotbit.style.color = "#006400";
+         } else {
+        StatusConect_hotbit.innerHTML = ('Status: NO Conected');
+           StatusConect_hotbit.style.color = "#f00";
+      }     
      
+        
         
      
     console.log(body);
@@ -611,7 +642,9 @@ if(currentPrice_BuyCOIN_USD_hotbit < currentPrice_BuyCOIN_USD && $('#hotbitbtcal
    divSellCOIN_USD_hotbit1.innerHTML = body.result.orders[0].left;
     
    currentPrice_SellCOIN_USD_hotbit = body.result.orders[0].price;
-            
+        
+  StatusConect_COIN_USD_hotbit = body.result.orders.length;  
+        
     console.log(body);
 
     });
@@ -619,32 +652,17 @@ if(currentPrice_BuyCOIN_USD_hotbit < currentPrice_BuyCOIN_USD && $('#hotbitbtcal
   .catch(err => console.log(err)); 
   
    
-	 
-  // Last Sync: 15/12/2019 @ 19:52:37 - последний запуск функции покажет)),  обновили и показало(обновило) время и на паузу его поставило
-   var currentdate = new Date(); 
-	var datetime = "Last Sync: " + currentdate.getDate() + "/"
-	                + (currentdate.getMonth()+1)  + "/" 
-	                + currentdate.getFullYear() + " @ "  
-	                + currentdate.getHours() + ":"  
-	                + currentdate.getMinutes() + ":" 
-	                + currentdate.getSeconds();
-	$('.updtime span').html(datetime);
-  
-   });	 
-	 
-	 
    
    setTimeout(() => {   
 //отправляем смс на Телеграм бота   
 var chatid = "278006495";
 var token = "996232700:AAEnZnXQV8SkMOXNIm3zChiytOdZtFcKu4Q";
 
-     //%0A - строка будет с нового рядка
+     // %0A - строка будет с нового рядка
 var text1 = "Btc-alpha ➤ Hotbit:" + ' ' + (btcalphahotbit.innerHTML) + "%"; 
 var text2 = "%0AHotbit ➤ Btc-alpha:" + ' ' + (hotbitbtcalpha.innerHTML) + "%"; 
 var text3 = "%0ABtc-alpha ➤ Livecoin:" + ' ' + (btcalphalivecoin.innerHTML) + "%";
-var text4 = "%0ALivecoin ➤ Btc-alpha:" + ' ' + (livecoinbtcalpha.innerHTML) + "%";   
-var text5 = "%0ALivecoin ➤ Hotbit:" + ' ' + (livecoinhotbit.innerHTML) + "%";
+var text4 = "%0ALivecoin ➤ Btc-alpha:" + ' ' + (livecoinbtcalpha.innerHTML) + "%";   var text5 = "%0ALivecoin ➤ Hotbit:" + ' ' + (livecoinhotbit.innerHTML) + "%";
 var text6 = "%0AHotbit ➤ Livecoin:" + ' ' + (hotbitlivecoin.innerHTML) + "%";  
      
 //Отправляем текст в наш телеграм канал
@@ -653,16 +671,31 @@ livecoinbtcalphaSMS(token,text1,text2,text3,text4,text5,text6,chatid);
   var z=$.ajax({  
   type: "POST",  
   url: "https://api.telegram.org/bot"+token+"/sendMessage?chat_id="+chatid+"&text="+text1+text2+text3+text4+text5+text6,
-     
+  
+   
   }); 
  };
 
      }, 3000);
    
    
+   // Last Sync: 15/12/2019 @ 19:52:37 - последний запуск функции покажет)),  обновили и показало(обновило) время и на паузу его поставило
+   var currentdate = new Date(); 
+	var datetime = "Last Sync: " + currentdate.getDate() + "/"
+	                + (currentdate.getMonth()+1)  + "/" 
+	                + currentdate.getFullYear() + " @ "  
+	                + currentdate.getHours() + ":"  
+	                + currentdate.getMinutes() + ":" 
+	                + currentdate.getSeconds();
+	$('.updtime span').html(datetime);
    
+   
+   
+  
+   });
 
 
+  
 
 
 
