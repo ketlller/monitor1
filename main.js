@@ -106,9 +106,9 @@ var previousPositive44444 = true;
 var previousPositive55555 = true; 
 var previousPositive66666 = true; 
 
-var StatusConect_btcalpha = document.querySelector('#StatusConect_btcalpha');
-var StatusConect_livecoin = document.querySelector('#StatusConect_livecoin');
-var StatusConect_hotbit = document.querySelector('#StatusConect_hotbit');
+//var StatusConect_btcalpha = document.querySelector('#StatusConect_btcalpha');
+//var StatusConect_livecoin = document.querySelector('#StatusConect_livecoin');
+//var StatusConect_hotbit = document.querySelector('#StatusConect_hotbit');
 
  btn.addEventListener('click', () => {  
 
@@ -578,31 +578,31 @@ if(currentPrice_BuyCOIN_USD_hotbit < currentPrice_BuyCOIN_USD_livecoin && $('#ho
 if(currentPrice_SellCOIN_USD < currentPrice_SellCOIN_USD_hotbit && $('#btcalphahotbit_notificator').prop('checked'))beep();        
 if(currentPrice_BuyCOIN_USD_hotbit < currentPrice_BuyCOIN_USD && $('#hotbitbtcalpha_notificator').prop('checked'))beep();        
        
-    if(StatusConect_COIN_USD_btcalpha > 0) { 
-            StatusConect_btcalpha.innerHTML = ('Status: OK Conected');
-      StatusConect_btcalpha.style.color = "#006400";
+   // if(StatusConect_COIN_USD_btcalpha > 0) { 
+         //   StatusConect_btcalpha.innerHTML = ('Status: OK Conected');
+     // StatusConect_btcalpha.style.color = "#006400";
 
-         } else {
-        StatusConect_btcalpha.innerHTML = ('Status: NO Conected');
-             StatusConect_btcalpha.style.color = "#f00";
-      }      
+      //   } else {
+      //  StatusConect_btcalpha.innerHTML = ('Status: NO Conected');
+      //       StatusConect_btcalpha.style.color = "#f00";
+     // }      
       
         
-      if(StatusConect_COIN_USD_livecoin == 3) { 
-            StatusConect_livecoin.innerHTML = ('Status: OK Conected');
-        StatusConect_livecoin.style.color = "#006400";
-         } else {
-        StatusConect_livecoin.innerHTML = ('Status: NO Conected');
-           StatusConect_livecoin.style.color = "#f00";
-      }   
+     // if(StatusConect_COIN_USD_livecoin == 3) { 
+     //       StatusConect_livecoin.innerHTML = ('Status: OK Conected');
+    //    StatusConect_livecoin.style.color = "#006400";
+      //   } else {
+       // StatusConect_livecoin.innerHTML = ('Status: NO Conected');
+       //    StatusConect_livecoin.style.color = "#f00";
+//      }   
         
-       if(StatusConect_COIN_USD_hotbit == 1) { 
-            StatusConect_hotbit.innerHTML = ('Status: OK Conected');
-         StatusConect_hotbit.style.color = "#006400";
-         } else {
-        StatusConect_hotbit.innerHTML = ('Status: NO Conected');
-           StatusConect_hotbit.style.color = "#f00";
-      }     
+  //     if(StatusConect_COIN_USD_hotbit == 1) { 
+    //        StatusConect_hotbit.innerHTML = ('Status: OK Conected');
+      //   StatusConect_hotbit.style.color = "#006400";
+  //       } else {
+   //     StatusConect_hotbit.innerHTML = ('Status: NO Conected');
+       //    StatusConect_hotbit.style.color = "#f00";
+     // }     
      
         
         
