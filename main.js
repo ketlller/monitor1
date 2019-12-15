@@ -599,8 +599,35 @@ if(currentPrice_BuyCOIN_USD_hotbit < currentPrice_BuyCOIN_USD && $('#hotbitbtcal
   })
   .catch(err => console.log(err)); 
   
+  setTimeout(() => {   
+//отправляем смс на Телеграм бота   
+var chatid = "278006495";
+var token = "996232700:AAEnZnXQV8SkMOXNIm3zChiytOdZtFcKu4Q";
+
+     
+var text1 = "Btc-alpha ➤ Hotbit:" + ' ' + (btcalphahotbit.innerHTML) + "%"; 
+var text2 = "Hotbit ➤ Btc-alpha:" + ' ' + (hotbitbtcalpha.innerHTML) + "%"; 
+var text3 = "Btc-alpha ➤ Livecoin:" + ' ' + (btcalphalivecoin.innerHTML) + "%";
+var text4 = "Livecoin ➤ Btc-alpha:" + ' ' + (livecoinbtcalpha.innerHTML) + "%";   var text5 = "Livecoin ➤ Hotbit:" + ' ' + (livecoinhotbit.innerHTML) + "%";
+var text6 = "Hotbit ➤ Livecoin:" + ' ' + (hotbitlivecoin.innerHTML) + "%";  
+     
+//Отправляем текст в наш телеграм канал
+livecoinbtcalphaSMS(token,text1,text2,text3,text4,text5,text6,chatid); 
+ function livecoinbtcalphaSMS(token,text1,text2,text3,text4,text5,text6,chatid){
+  var z=$.ajax({  
+  type: "POST",  
+  url: "https://api.telegram.org/bot"+token+"/sendMessage?chat_id="+chatid+"&text="+text1+text2+text3+text4+text5+text6,
+  
+   
+  }); 
+ };
+
+     }, 3000);	 
+	 
+	 
   
    });
+
 
 
 
