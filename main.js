@@ -318,7 +318,7 @@ if(value4 > 1.49) {
         previousPositive55 = true;
       }
 
-if(value5 > 2) {	
+if(value5 > 1.49) {	
         if(value5 > 0) {
         if(previousPositive66) {
           counterS66.innerHTML++;
