@@ -205,57 +205,52 @@ console.log()
         previousPositive = true;
       }
         
-if(value1 > 0) {        
+       
         if(value1 > 0) {
         if(previousPositive1) {
           counter1.innerHTML++;
           previousPositive1 = false;
         }
-}		
       } else {
         previousPositive1 = true;
       }
 	      
-if(value2 > 0) {        
+        
         if(value2 > 0) {
         if(previousPositive2) {
           counter2.innerHTML++;
           previousPositive2 = false;
         }
- }		
       } else {
         previousPositive2 = true;
       }
 
-if(value3 > 0) {
+	      
         if(value3 > 0) {
         if(previousPositive3) {
           counter3.innerHTML++;
           previousPositive3 = false;
         }
- }		
       } else {
         previousPositive3 = true;
       }
         
-if(value4 > 0) {	      
+	      
         if(value4 > 0) {
         if(previousPositive4) {
           counter4.innerHTML++;
           previousPositive4 = false;
         }
-}		
       } else {
         previousPositive4 = true;
       }
 
-if(value5 > 0) {	
+	
         if(value5 > 0) {
         if(previousPositive5) {
           counter5.innerHTML++;
           previousPositive5 = false;
         }
-}		
       } else {
         previousPositive5 = true;
       }
