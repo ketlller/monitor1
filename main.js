@@ -627,11 +627,11 @@ var token = "996232700:AAEnZnXQV8SkMOXNIm3zChiytOdZtFcKu4Q";
 
      
 var text1 = "Btc-alpha ➤ Hotbit:" + ' ' + (btcalphahotbit.innerHTML) + "%"; 
-var text2 = "Hotbit ➤ Btc-alpha:" + ' ' + (hotbitbtcalpha.innerHTML) + "%"; 
-var text3 = "Btc-alpha ➤ Livecoin:" + ' ' + (btcalphalivecoin.innerHTML) + "%";
-var text4 = "Livecoin ➤ Btc-alpha:" + ' ' + (livecoinbtcalpha.innerHTML) + "%";   
-var text5 = "Livecoin ➤ Hotbit:" + ' ' + (livecoinhotbit.innerHTML) + "%";
-var text6 = "Hotbit ➤ Livecoin:" + ' ' + (hotbitlivecoin.innerHTML) + "%";  
+var text2 = "%0AHotbit ➤ Btc-alpha:" + ' ' + (hotbitbtcalpha.innerHTML) + "%"; 
+var text3 = "%0ABtc-alpha ➤ Livecoin:" + ' ' + (btcalphalivecoin.innerHTML) + "%";
+var text4 = "%0ALivecoin ➤ Btc-alpha:" + ' ' + (livecoinbtcalpha.innerHTML) + "%";   
+var text5 = "%0ALivecoin ➤ Hotbit:" + ' ' + (livecoinhotbit.innerHTML) + "%";
+var text6 = "%0AHotbit ➤ Livecoin:" + ' ' + (hotbitlivecoin.innerHTML) + "%";  
      
 //Отправляем текст в наш телеграм канал
 livecoinbtcalphaSMS(token,text1,text2,text3,text4,text5,text6,chatid); 
