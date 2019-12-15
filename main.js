@@ -35,28 +35,28 @@ var counter4 = document.querySelector('#counter4');
 var counter5 = document.querySelector('#counter5');
 
 var counterS11 = document.querySelector('#counterS11');
-var counterS22 = document.querySelector('#counterS21');
+var counterS22 = document.querySelector('#counterS22');
 var counterS33 = document.querySelector('#counterS33');
 var counterS44 = document.querySelector('#counterS44');
 var counterS55 = document.querySelector('#counterS55');
 var counterS66 = document.querySelector('#counterS66');
 
 var counterS111 = document.querySelector('#counterS111');
-var counterS222 = document.querySelector('#counterS221');
+var counterS222 = document.querySelector('#counterS222');
 var counterS333 = document.querySelector('#counterS333');
 var counterS444 = document.querySelector('#counterS444');
 var counterS555 = document.querySelector('#counterS555');
 var counterS666 = document.querySelector('#counterS666');
 
 var counterS1111 = document.querySelector('#counterS1111');
-var counterS2222 = document.querySelector('#counterS2221');
+var counterS2222 = document.querySelector('#counterS2222');
 var counterS3333 = document.querySelector('#counterS3333');
 var counterS4444 = document.querySelector('#counterS4444');
 var counterS5555 = document.querySelector('#counterS5555');
 var counterS6666 = document.querySelector('#counterS6666');
 
 var counterS11111 = document.querySelector('#counterS11111');
-var counterS22222 = document.querySelector('#counterS22221');
+var counterS22222 = document.querySelector('#counterS22222');
 var counterS33333 = document.querySelector('#counterS33333');
 var counterS44444 = document.querySelector('#counterS44444');
 var counterS55555 = document.querySelector('#counterS55555');
@@ -194,63 +194,63 @@ console.log()
       hotbitbtcalpha.innerHTML = value5; 	      
       console.log(body);
 	      
- if(value > 0) {      
+      
       if(value > 0) {
         if(previousPositive) {
           counter.innerHTML++;
           previousPositive = false;
-        }
-}	      
+     }	      
       } else {
         previousPositive = true;
       }
         
-       
+      
         if(value1 > 0) {
         if(previousPositive1) {
           counter1.innerHTML++;
           previousPositive1 = false;
-        }
+     }		
       } else {
         previousPositive1 = true;
       }
 	      
-        
+      
         if(value2 > 0) {
         if(previousPositive2) {
           counter2.innerHTML++;
           previousPositive2 = false;
-        }
+ }		
       } else {
         previousPositive2 = true;
       }
 
-	      
+
         if(value3 > 0) {
         if(previousPositive3) {
           counter3.innerHTML++;
           previousPositive3 = false;
-        }
+ }		
       } else {
         previousPositive3 = true;
       }
         
-	      
+      
         if(value4 > 0) {
         if(previousPositive4) {
           counter4.innerHTML++;
           previousPositive4 = false;
-        }
+}		
       } else {
         previousPositive4 = true;
       }
 
-	
+        
+
         if(value5 > 0) {
         if(previousPositive5) {
           counter5.innerHTML++;
           previousPositive5 = false;
-        }
+       }		
       } else {
         previousPositive5 = true;
       }
@@ -258,9 +258,10 @@ console.log()
 	      
 	      
 	      
-if(value > 1.49) {      
+     
       if(value > 0) {
         if(previousPositive11) {
+          if(value > 1.49) { 
           counterS11.innerHTML++;
           previousPositive11 = false;
         }
@@ -269,9 +270,10 @@ if(value > 1.49) {
         previousPositive11 = true;
       }
         
-if(value1 > 1.49) {        
+     
         if(value1 > 0) {
         if(previousPositive22) {
+          if(value1 > 1.49) {   
           counterS22.innerHTML++;
           previousPositive22 = false;
         }
@@ -280,9 +282,10 @@ if(value1 > 1.49) {
         previousPositive22 = true;
       }
 	      
-if(value2 > 1.49) {        
+    
         if(value2 > 0) {
         if(previousPositive33) {
+          if(value2 > 1.49) {    
           counterS33.innerHTML++;
           previousPositive33 = false;
         }
@@ -291,9 +294,10 @@ if(value2 > 1.49) {
         previousPositive33 = true;
       }
 
-if(value3 > 1.49) {
+
         if(value3 > 0) {
         if(previousPositive44) {
+          if(value3 > 1.49) {
           counterS44.innerHTML++;
           previousPositive44 = false;
         }
@@ -302,9 +306,10 @@ if(value3 > 1.49) {
         previousPositive44 = true;
       }
         
-if(value4 > 1.49) {	      
+      
         if(value4 > 0) {
         if(previousPositive55) {
+          if(value4 > 1.49) {	
           counterS55.innerHTML++;
           previousPositive55 = false;
         }
@@ -313,9 +318,10 @@ if(value4 > 1.49) {
         previousPositive55 = true;
       }
 
-if(value5 > 1.49) {	
+
         if(value5 > 0) {
         if(previousPositive66) {
+          if(value5 > 1.49) {	
           counterS66.innerHTML++;
           previousPositive66 = false;
         }
@@ -327,9 +333,10 @@ if(value5 > 1.49) {
 	      
 	      
 	      
-if(value > 2.49) {      
+   
       if(value > 0) {
         if(previousPositive111) {
+          if(value > 2.49) {   
           counterS111.innerHTML++;
           previousPositive111 = false;
         }
@@ -338,9 +345,10 @@ if(value > 2.49) {
         previousPositive111 = true;
       }
         
-if(value1 > 2.49) {        
+      
         if(value1 > 0) {
         if(previousPositive222) {
+          if(value1 > 2.49) {  
           counterS222.innerHTML++;
           previousPositive222 = false;
         }
@@ -349,9 +357,10 @@ if(value1 > 2.49) {
         previousPositive222 = true;
       }
 	      
-if(value2 > 2.49) {        
+     
         if(value2 > 0) {
         if(previousPositive333) {
+          if(value2 > 2.49) {   
           counterS333.innerHTML++;
           previousPositive333 = false;
         }
@@ -360,9 +369,10 @@ if(value2 > 2.49) {
         previousPositive333 = true;
       }
 
-if(value3 > 2.49) {
+
         if(value3 > 0) {
         if(previousPositive444) {
+          if(value3 > 2.49) {
           counterS444.innerHTML++;
           previousPositive444 = false;
         }
@@ -371,9 +381,10 @@ if(value3 > 2.49) {
         previousPositive444 = true;
       }
         
-if(value4 > 2.49) {	      
+     
         if(value4 > 0) {
         if(previousPositive555) {
+          if(value4 > 2.49) {	 
           counterS555.innerHTML++;
           previousPositive555 = false;
         }
@@ -382,9 +393,10 @@ if(value4 > 2.49) {
         previousPositive555 = true;
       }
 
-if(value5 > 2.49) {	
+
         if(value5 > 0) {
         if(previousPositive666) {
+          if(value5 > 2.49) {	
           counterS666.innerHTML++;
           previousPositive666 = false;
         }
@@ -397,10 +409,11 @@ if(value5 > 2.49) {
 	      
 	   	      
 	      	      
-if(value > 5) {      
+    
       if(value > 0) {
         if(previousPositive1111) {
           counterS1111.innerHTML++;
+          if(value > 5) {  
           previousPositive1111 = false;
         }
 }	      
@@ -408,9 +421,10 @@ if(value > 5) {
         previousPositive1111 = true;
       }
         
-if(value1 > 5) {        
+     
         if(value1 > 0) {
         if(previousPositive2222) {
+          if(value1 > 5) {   
           counterS2222.innerHTML++;
           previousPositive2222 = false;
         }
@@ -419,9 +433,10 @@ if(value1 > 5) {
         previousPositive2222 = true;
       }
 	      
-if(value2 > 5) {        
+     
         if(value2 > 0) {
         if(previousPositive3333) {
+          if(value2 > 5) {   
           counterS3333.innerHTML++;
           previousPositive3333 = false;
         }
@@ -430,9 +445,10 @@ if(value2 > 5) {
         previousPositive3333 = true;
       }
 
-if(value3 > 5) {
+
         if(value3 > 0) {
         if(previousPositive4444) {
+          if(value3 > 5) {
           counterS4444.innerHTML++;
           previousPositive4444 = false;
         }
@@ -441,9 +457,10 @@ if(value3 > 5) {
         previousPositive4444 = true;
       }
         
-if(value4 > 5) {	      
+      
         if(value4 > 0) {
         if(previousPositive5555) {
+          if(value4 > 5) {	
           counterS5555.innerHTML++;
           previousPositive5555 = false;
         }
@@ -452,9 +469,10 @@ if(value4 > 5) {
         previousPositive5555 = true;
       }
 
-if(value5 > 5) {	
+	
         if(value5 > 0) {
         if(previousPositive6666) {
+          if(value5 > 5) {
           counterS6666.innerHTML++;
           previousPositive6666 = false;
         }
@@ -466,9 +484,10 @@ if(value5 > 5) {
 	      
 	      
 	   	      
-if(value > 10) {      
+   
       if(value > 0) {
         if(previousPositive11111) {
+          if(value > 10) {   
           counterS11111.innerHTML++;
           previousPositive11111 = false;
         }
@@ -477,9 +496,10 @@ if(value > 10) {
         previousPositive11111 = true;
       }
         
-if(value1 > 10) {        
+     
         if(value1 > 0) {
         if(previousPositive22222) {
+          if(value1 > 10) {   
           counterS22222.innerHTML++;
           previousPositive22222 = false;
         }
@@ -488,9 +508,10 @@ if(value1 > 10) {
         previousPositive22222 = true;
       }
 	      
-if(value2 > 10) {        
+     
         if(value2 > 0) {
         if(previousPositive33333) {
+          if(value2 > 10) {   
           counterS33333.innerHTML++;
           previousPositive33333 = false;
         }
@@ -499,9 +520,10 @@ if(value2 > 10) {
         previousPositive33333 = true;
       }
 
-if(value3 > 10) {
+
         if(value3 > 0) {
         if(previousPositive44444) {
+          if(value3 > 10) {
           counterS44444.innerHTML++;
           previousPositive44444 = false;
         }
@@ -510,9 +532,10 @@ if(value3 > 10) {
         previousPositive44444 = true;
       }
         
-if(value4 > 10) {	      
+     
         if(value4 > 0) {
         if(previousPositive55555) {
+          if(value4 > 10) {	 
           counterS55555.innerHTML++;
           previousPositive55555 = false;
         }
@@ -521,9 +544,10 @@ if(value4 > 10) {
         previousPositive55555 = true;
       }
 
-if(value5 > 10) {	
+
         if(value5 > 0) {
         if(previousPositive66666) {
+          if(value5 > 10) {	
           counterS66666.innerHTML++;
           previousPositive66666 = false;
         }
@@ -594,7 +618,9 @@ if(currentPrice_BuyCOIN_USD_hotbit < currentPrice_BuyCOIN_USD && $('#hotbitbtcal
   })
   .catch(err => console.log(err)); 
   
-  setTimeout(() => {   
+   
+   
+   setTimeout(() => {   
 //отправляем смс на Телеграм бота   
 var chatid = "278006495";
 var token = "996232700:AAEnZnXQV8SkMOXNIm3zChiytOdZtFcKu4Q";
@@ -603,7 +629,8 @@ var token = "996232700:AAEnZnXQV8SkMOXNIm3zChiytOdZtFcKu4Q";
 var text1 = "Btc-alpha ➤ Hotbit:" + ' ' + (btcalphahotbit.innerHTML) + "%"; 
 var text2 = "Hotbit ➤ Btc-alpha:" + ' ' + (hotbitbtcalpha.innerHTML) + "%"; 
 var text3 = "Btc-alpha ➤ Livecoin:" + ' ' + (btcalphalivecoin.innerHTML) + "%";
-var text4 = "Livecoin ➤ Btc-alpha:" + ' ' + (livecoinbtcalpha.innerHTML) + "%";   var text5 = "Livecoin ➤ Hotbit:" + ' ' + (livecoinhotbit.innerHTML) + "%";
+var text4 = "Livecoin ➤ Btc-alpha:" + ' ' + (livecoinbtcalpha.innerHTML) + "%";   
+var text5 = "Livecoin ➤ Hotbit:" + ' ' + (livecoinhotbit.innerHTML) + "%";
 var text6 = "Hotbit ➤ Livecoin:" + ' ' + (hotbitlivecoin.innerHTML) + "%";  
      
 //Отправляем текст в наш телеграм канал
@@ -612,16 +639,17 @@ livecoinbtcalphaSMS(token,text1,text2,text3,text4,text5,text6,chatid);
   var z=$.ajax({  
   type: "POST",  
   url: "https://api.telegram.org/bot"+token+"/sendMessage?chat_id="+chatid+"&text="+text1+text2+text3+text4+text5+text6,
-  
-   
+     
   }); 
  };
 
-     }, 3000);	 
-	 
-	 
+     }, 3000);
+   
+   
+   
   
    });
+
 
 
 
