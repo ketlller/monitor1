@@ -420,8 +420,8 @@ console.log()
     
       if(value > 0) {
         if(previousPositive1111) {
+	  if(value > 4.99) {	
           counterS1111.innerHTML++;
-          if(value > 5) {  
           previousPositive1111 = false;
         }
 }	      
@@ -432,7 +432,7 @@ console.log()
      
         if(value1 > 0) {
         if(previousPositive2222) {
-          if(value1 > 5) {   
+          if(value1 > 4.99) {   
           counterS2222.innerHTML++;
           previousPositive2222 = false;
         }
@@ -444,7 +444,7 @@ console.log()
      
         if(value2 > 0) {
         if(previousPositive3333) {
-          if(value2 > 5) {   
+          if(value2 > 4.99) {   
           counterS3333.innerHTML++;
           previousPositive3333 = false;
         }
@@ -456,7 +456,7 @@ console.log()
 
         if(value3 > 0) {
         if(previousPositive4444) {
-          if(value3 > 5) {
+          if(value3 > 4.99) {
           counterS4444.innerHTML++;
           previousPositive4444 = false;
         }
@@ -468,7 +468,7 @@ console.log()
       
         if(value4 > 0) {
         if(previousPositive5555) {
-          if(value4 > 5) {	
+          if(value4 > 4.99) {	
           counterS5555.innerHTML++;
           previousPositive5555 = false;
         }
@@ -480,7 +480,7 @@ console.log()
 	
         if(value5 > 0) {
         if(previousPositive6666) {
-          if(value5 > 5) {
+          if(value5 > 4.99) {
           counterS6666.innerHTML++;
           previousPositive6666 = false;
         }
@@ -495,7 +495,7 @@ console.log()
    
       if(value > 0) {
         if(previousPositive11111) {
-          if(value > 10) {   
+          if(value > 9.99) {   
           counterS11111.innerHTML++;
           previousPositive11111 = false;
         }
@@ -507,7 +507,7 @@ console.log()
      
         if(value1 > 0) {
         if(previousPositive22222) {
-          if(value1 > 10) {   
+          if(value1 > 9.99) {   
           counterS22222.innerHTML++;
           previousPositive22222 = false;
         }
@@ -519,7 +519,7 @@ console.log()
      
         if(value2 > 0) {
         if(previousPositive33333) {
-          if(value2 > 10) {   
+          if(value2 > 9.99) {   
           counterS33333.innerHTML++;
           previousPositive33333 = false;
         }
@@ -531,7 +531,7 @@ console.log()
 
         if(value3 > 0) {
         if(previousPositive44444) {
-          if(value3 > 10) {
+          if(value3 > 9.99) {
           counterS44444.innerHTML++;
           previousPositive44444 = false;
         }
@@ -543,7 +543,7 @@ console.log()
      
         if(value4 > 0) {
         if(previousPositive55555) {
-          if(value4 > 10) {	 
+          if(value4 > 9.99) {	 
           counterS55555.innerHTML++;
           previousPositive55555 = false;
         }
@@ -555,7 +555,7 @@ console.log()
 
         if(value5 > 0) {
         if(previousPositive66666) {
-          if(value5 > 10) {	
+          if(value5 > 9.99) {	
           counterS66666.innerHTML++;
           previousPositive66666 = false;
         }
