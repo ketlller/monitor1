@@ -118,19 +118,22 @@ var previousPositive66666 = true;
    var val3 = document.querySelector("#new_type3").value;
    //var val4 = document.querySelector("#new_type4").value;
    
-    var targetUrl_COIN_USD = 'https://btc-alpha.com/api/v1/orderbook/PZM_USD/'; 
-   targetUrl_COIN_USD=targetUrl_COIN_USD.replace(/[^\/]+(?=\/$)/,val1);
+    var targetUrl_COIN_USD = 'https://poloniex.com/public?command=returnOrderBook&currencyPair=USDT_ETH'; 
+   targetUrl_COIN_USD=targetUrl_COIN_USD.replace(/[^\=]*$/,val1);
    
-    var targetUrl_COIN_USD_Livecoin = 'https://api.livecoin.net/exchange/order_book?currencyPair=PZM/USD';
-   targetUrl_COIN_USD_Livecoin=targetUrl_COIN_USD_Livecoin.replace(/[^\=]*$/,val2);
    
-      var targetUrl_COIN_USD_hotbit1 = 'https://api.hotbit.io/api/v1/order.book?market=PZM/USDT&side=1&offset=0&limit=1'; 
+    var targetUrl_COIN_USD_Livecoin = 'https://api.hitbtc.com/api/2/public/orderbook/ETHBTC';
+   targetUrl_COIN_USD_Livecoin=targetUrl_COIN_USD_Livecoin.replace(/[^\/]*$/,val2);
+   
+   
+   
+      var targetUrl_COIN_USD_hotbit1 = 'https://api.bittrex.com/api/v1.1/public/getorderbook?market=BTC-LTC&type=both'; 
    targetUrl_COIN_USD_hotbit1=targetUrl_COIN_USD_hotbit1.replace(/([?&]market=)[^&]+/,'$1'+val3);
 
 
    
-      var targetUrl_COIN_USD_hotbit2 = 'https://api.hotbit.io/api/v1/order.book?market=PZM/USDT&side=2&offset=0&limit=1'; 
-   targetUrl_COIN_USD_hotbit2=targetUrl_COIN_USD_hotbit2.replace(/([?&]market=)[^&]+/,'$1'+val3);
+     // var targetUrl_COIN_USD_hotbit2 = 'https://api.hotbit.io/api/v1/order.book?market=PZM/USDT&side=2&offset=0&limit=1'; 
+ //  targetUrl_COIN_USD_hotbit2=targetUrl_COIN_USD_hotbit2.replace(/([?&]market=)[^&]+/,'$1'+val3);
 
 
 
@@ -141,7 +144,7 @@ let proxyUrl = 'https://cors-anywhere.herokuapp.com/';
 let resUrl1 = proxyUrl + targetUrl_COIN_USD;
 let resUrl2 = proxyUrl + targetUrl_COIN_USD_Livecoin;
 let resUrl3 = proxyUrl + targetUrl_COIN_USD_hotbit1;
-let resUrl4 = proxyUrl + targetUrl_COIN_USD_hotbit2;
+//let resUrl4 = proxyUrl + targetUrl_COIN_USD_hotbit2;
 
 console.log()
    
@@ -155,14 +158,14 @@ console.log()
    fetch(resUrl1)
     .then(res => {
       res.json().then(body => {
-      divBuyCOIN_USD.innerHTML = body.buy[0].price;  
-    divBuyCOIN_USD1.innerHTML = body.buy[0].amount; 
-      divSellCOIN_USD.innerHTML = body.sell[0].price;
-    divSellCOIN_USD1.innerHTML = body.sell[0].amount;
+     divBuyCOIN_USD.innerHTML = body.bids[0][0];  
+   divBuyCOIN_USD1.innerHTML = body.bids[0][1]; 
+    divSellCOIN_USD.innerHTML = body.asks[0][0];
+  divSellCOIN_USD1.innerHTML = body.asks[0][1];
     
-      currentPrice_BuyCOIN_USD = body.buy[0].price;
-      currentPrice_SellCOIN_USD = body.sell[0].price;
-    StatusConect_COIN_USD_btcalpha = body.sell[0].price;
+     currentPrice_BuyCOIN_USD = body.bids[0][0];
+     currentPrice_SellCOIN_USD = body.asks[0][0];
+   // StatusConect_COIN_USD_btcalpha = body.asks[0].price;
     
    
     });
@@ -175,14 +178,14 @@ console.log()
    fetch(resUrl2)
     .then(res => {
       res.json().then(body => {  
-      divBuyCOIN_USD_livecoin.innerHTML = body.bids[0][0];
-    divBuyCOIN_USD_livecoin1.innerHTML = body.bids[0][1];
-      divSellCOIN_USD_livecoin.innerHTML = body.asks[0][0];
-    divSellCOIN_USD_livecoin1.innerHTML = body.asks[0][1];
+      divBuyCOIN_USD_livecoin.innerHTML = body.bid[0].price;
+    divBuyCOIN_USD_livecoin1.innerHTML = body.bid[0].size;
+      divSellCOIN_USD_livecoin.innerHTML = body.ask[0].price;
+    divSellCOIN_USD_livecoin1.innerHTML = body.ask[0].size;
     
-       currentPrice_BuyCOIN_USD_livecoin = body.bids[0][0];
-       currentPrice_SellCOIN_USD_livecoin = body.asks[0][0];
-       StatusConect_COIN_USD_livecoin = body.bids[0].length; 
+       currentPrice_BuyCOIN_USD_livecoin = body.bid[0].price;
+       currentPrice_SellCOIN_USD_livecoin = body.ask[0].price;
+     //  StatusConect_COIN_USD_livecoin = body.bids[0].length; 
         
        
         
@@ -618,14 +621,16 @@ if(currentPrice_BuyCOIN_USD_hotbit < currentPrice_BuyCOIN_USD && $('#hotbitbtcal
     .then(res => {
       res.json().then(body => {  
       
-    divBuyCOIN_USD_hotbit.innerHTML = body.result.orders[0].price;
-    divBuyCOIN_USD_hotbit1.innerHTML = body.result.orders[0].left;
+    divBuyCOIN_USD_hotbit.innerHTML = body.result.buy[0].Rate;
+    divBuyCOIN_USD_hotbit1.innerHTML = body.result.buy[0].Quantity;
      
-    currentPrice_BuyCOIN_USD_hotbit = body.result.orders[0].price;
+    currentPrice_BuyCOIN_USD_hotbit = body.result.buy[0].Rate;
      
         
-         
-      
+   divSellCOIN_USD_hotbit.innerHTML = body.result.sell[0].Rate;
+   divSellCOIN_USD_hotbit1.innerHTML = body.result.sell[0].Quantity;
+    
+   currentPrice_SellCOIN_USD_hotbit = body.result.sell[0].Rate;   
         
        
      console.log(body);
@@ -635,21 +640,21 @@ if(currentPrice_BuyCOIN_USD_hotbit < currentPrice_BuyCOIN_USD && $('#hotbitbtcal
   .catch(err => console.log(err)); 
   
   
-   fetch(resUrl4)
-    .then(res => {
-      res.json().then(body => {  
- 	 divSellCOIN_USD_hotbit.innerHTML = body.result.orders[0].price;
-   divSellCOIN_USD_hotbit1.innerHTML = body.result.orders[0].left;
+  // fetch(resUrl4)
+ //   .then(res => {
+  //    res.json().then(body => {  
+ 	// divSellCOIN_USD_hotbit.innerHTML = body.result.orders[0].price;
+ //  divSellCOIN_USD_hotbit1.innerHTML = body.result.orders[0].left;
     
-   currentPrice_SellCOIN_USD_hotbit = body.result.orders[0].price;
+  // currentPrice_SellCOIN_USD_hotbit = body.result.orders[0].price;
         
-  StatusConect_COIN_USD_hotbit = body.result.orders.length;  
+  //StatusConect_COIN_USD_hotbit = body.result.orders.length;  
         
-    console.log(body);
+  //  console.log(body);
 
-    });
-  })
-  .catch(err => console.log(err)); 
+ //   });
+ // })
+  //.catch(err => console.log(err)); 
   
    
    
