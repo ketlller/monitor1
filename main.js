@@ -621,16 +621,16 @@ if(currentPrice_BuyCOIN_USD_hotbit < currentPrice_BuyCOIN_USD && $('#hotbitbtcal
     .then(res => {
       res.json().then(body => {  
       
-    divBuyCOIN_USD_hotbit.innerHTML = body.result.buy[0].Rate;
-    divBuyCOIN_USD_hotbit1.innerHTML = body.result.buy[0].Quantity;
+    divBuyCOIN_USD_hotbit.innerHTML = body.result.sell[0].Rate;
+    divBuyCOIN_USD_hotbit1.innerHTML = body.result.sell[0].Quantity;
      
-    currentPrice_BuyCOIN_USD_hotbit = body.result.buy[0].Rate;
+    currentPrice_BuyCOIN_USD_hotbit = body.result.sell[0].Rate;
      
         
-   divSellCOIN_USD_hotbit.innerHTML = body.result.sell[0].Rate;
-   divSellCOIN_USD_hotbit1.innerHTML = body.result.sell[0].Quantity;
+   divSellCOIN_USD_hotbit.innerHTML = body.result.buy[0].Rate;
+   divSellCOIN_USD_hotbit1.innerHTML = body.result.buy[0].Quantity;
     
-   currentPrice_SellCOIN_USD_hotbit = body.result.sell[0].Rate;   
+   currentPrice_SellCOIN_USD_hotbit = body.result.buy[0].Rate;   
         
        
      console.log(body);
